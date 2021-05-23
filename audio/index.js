@@ -1,7 +1,7 @@
 var glob = require("glob")
 var fs = require("fs")
  
-glob("./**/*.*", {}, function (er, files) {
+glob("./**/*.{mp3,wav,flac}", {}, function (er, files) {
   let result = []
   let download = ''
   files.forEach(item => {
@@ -16,7 +16,7 @@ glob("./**/*.*", {}, function (er, files) {
       })
       download += `https://cdn.jsdelivr.net/gh/nj-lizhi/song@master/audio${item.slice(1)}\n`
     } else {
-      console.log(item)
+      console.log('文件大于20M：', item)
     }
   })
   fs.writeFileSync('./list.js', "var list = " + JSON.stringify(result))
