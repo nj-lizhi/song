@@ -12,7 +12,7 @@ glob("./audio/**/*.{mp3,wav,flac}", {}, function (er, files) {
         name: arr[3].replace(/\.(mp3|flac|wav)$/g, ''),
         artist: "专辑-"+arr[2],
         url: 'https://cdn.jsdelivr.net/gh/nj-lizhi/song@master' + item.slice(1),
-        cover: 'https://cdn.jsdelivr.net/gh/nj-lizhi/song@master/audio/cover.png',
+        cover: 'https://cdn.jsdelivr.net/gh/nj-lizhi/song@master/audio/' + arr[2] + 'cover.jpg',
       })
       download += `https://cdn.jsdelivr.net/gh/nj-lizhi/song@master${item.slice(1)}\n`
     } else {
