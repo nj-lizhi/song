@@ -14,7 +14,7 @@ glob("./audio/**/*.{mp3,wav,flac}", {}, function (er, files) {
         url: 'https://testingcf.jsdelivr.net/gh/nj-lizhi/song@main' + item.slice(1),
         cover: 'https://testingcf.jsdelivr.net/gh/nj-lizhi/song@main/audio/' + arr[2] + '/cover.png',
       })
-      download += `https://gcore.jsdelivr.net/gh/nj-lizhi/song@main${item.slice(1)}\n`
+      download += `https://testingcf.jsdelivr.net/gh/nj-lizhi/song@main${item.slice(1)}\n`
     } else {
       console.log('文件大于20M：', item)
     }
