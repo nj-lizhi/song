@@ -20,5 +20,6 @@ glob("./audio/**/*.{mp3,wav,flac}", {}, function (er, files) {
     }
   })
   fs.writeFileSync('./audio/list.js', "var list = " + JSON.stringify(result))
+  fs.writeFileSync('./audio/list.json', JSON.stringify(result))
   fs.writeFileSync('./audio/download.txt', download)
 })
